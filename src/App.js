@@ -1,15 +1,21 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer/Footer';
+import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <Home />
-      <Footer />
-    </div>
+      <Switch>
+      <Route exact path="/home" component={Home} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+      <Route exact path="/" component={Login} /> 
+      </Switch>
+    </Router>
   );
 }
 
