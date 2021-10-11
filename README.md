@@ -3,7 +3,7 @@
 It is a skin care service website.
 
 Technology:
-React
+React,
 React-Bootstrap
 
 #Run
